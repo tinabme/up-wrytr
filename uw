@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# up-wrytr (uw) - CLI wrapper
+# Makes it easy to invoke the Node.js tool from anywhere
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Check if node_modules exists, if not prompt to install
+if [ ! -d "$SCRIPT_DIR/node_modules" ]; then
+    echo "📦 First time setup: Installing dependencies..."
+    cd "$SCRIPT_DIR"
+    npm install
+    echo ""
+fi
+
+# Run the Node.js script with all arguments passed through
+exec node "$SCRIPT_DIR/src/index.js" "$@"

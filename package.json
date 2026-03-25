@@ -1,0 +1,25 @@
+{
+  "name": "up-wrytr",
+  "version": "1.0.0",
+  "description": "CLI tool to help write communications (Slack, email, GitHub) with conversational LLM assistance",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "uw": "./uw"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "setup": "npm install && echo 'Set up your GitHub token in .env or use gh CLI'"
+  },
+  "keywords": ["llm", "cli", "slack", "email", "github"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "openai": "^4.28.0",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.0.0",
+    "yargs": "^17.7.0"
+  },
+  "devDependencies": {}
+}
