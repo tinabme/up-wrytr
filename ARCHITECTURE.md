@@ -86,16 +86,19 @@ up-wrytr/
 ## Data Flow - Example
 
 **User Input:**
+
 ```bash
 ./uw "we need to talk about the deadline" -t empathetic -c slack
 ```
 
 **Step 1: Parse Input**
+
 - Message: "we need to talk about the deadline"
 - Tone: "empathetic"
 - Channel: "slack"
 
 **Step 2: Build System Prompt**
+
 ```
 You are a writing assistant...
 
@@ -107,6 +110,7 @@ Format for Slack: keep messages concise...
 ```
 
 **Step 3: Create User Prompt**
+
 ```
 Please help me write this slack message (empathetic tone):
 we need to talk about the deadline
@@ -116,10 +120,12 @@ we need to talk about the deadline
 Returns refined message
 
 **Step 5: Format for Slack**
+
 - Reduce excessive line breaks
 - Convert markdown bullets to Slack bullets
 
 **Step 6: Output**
+
 ```
 ✨ Crafting your message with AI...
 
@@ -140,29 +146,34 @@ wanted to make sure we're on the same page. 💙
 ## Key Components
 
 ### Input Layer (`lib/input.js`)
+
 - Detects if stdin is piped
 - Reads from files
 - Interactive prompts with readline
 - Command-line arguments
 
 ### Tone System (`lib/tones.js`)
+
 - 5 predefined tone profiles
 - Each has: description, LLM instructions, examples
 - Can be easy extended with custom tones
 
 ### Channel Formatters (`lib/channels.js`)
+
 - Platform-specific rules
 - Markdown handling
 - Length preferences
 - Special formatting (code blocks for GitHub, etc.)
 
 ### LLM Integration (`lib/llm.js`)
+
 - OpenAI API client (via GitHub token)
 - Builds context-aware prompts
 - Two modes: improve existing text, brainstorm new
 - Error handling & API management
 
 ### CLI Orchestration (`src/index.js`)
+
 - yargs for argument parsing
 - Determines input source
 - Coordinates all components
@@ -204,7 +215,9 @@ Ready to Copy!
 ## Extensibility
 
 ### Add a New Tone
+
 Edit `lib/tones.js`:
+
 ```javascript
 export const TONES = {
   ...existing tones...,
@@ -217,7 +230,9 @@ export const TONES = {
 ```
 
 ### Add a New Channel
+
 Edit `lib/channels.js`:
+
 ```javascript
 export const CHANNELS = {
   ...existing channels...,
@@ -230,6 +245,7 @@ export const CHANNELS = {
 ```
 
 ### Add New Input Method
+
 Edit `lib/input.js` and `src/index.js`
 
 ## Security & Privacy
