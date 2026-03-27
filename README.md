@@ -5,6 +5,17 @@ communications for Slack, email, and GitHub.
 Never stare at a blank message again. Get AI assistance writing messages
 that are professional, casual, silly, empathetic, or perfectly mixed.
 
+## The Story Behind up-wrytr 📝
+
+I’m a chronic over-editor. No matter how many times I proofread, I always spot something the exact millisecond after I hit send. 🤦‍♀️
+
+I found myself asking Copilot to help me "vibe check" my messages so often that I decided to wrap it into a simple tool. **up-wrytr** started as a tiny personal script, but after spiffing it up with Copilot, I figured—hey, maybe I’m not the only one who does this?
+
+I’m sharing it here in case it’s a help to any other "accidental editors" out there!
+
+That is exactly what up-wrytr is built for.
+
+
 ## Features
 
 ✨ **Multi-Tone Support**: Professional, casual, silly, empathetic,
