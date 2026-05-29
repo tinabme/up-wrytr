@@ -1,6 +1,15 @@
 # up-wrytr
 
-Tiny CLI to rewrite drafts for Slack, email, and GitHub in a chosen tone.
+Tiny CLI powered by an LLM, to help you craft better communicationsfor Slack, email, and git issues, etc.. in a chosen tone.
+
+
+## The Story Behind up-wrytr
+
+I’m a chronic over-editor. No matter how many times I proofread, I always spot something the exact millisecond after I hit send. 🤦‍♀️
+
+I found myself asking Copilot to help me "vibe check" my messages so often that I decided to wrap it into a simple CLI tool **up-wrytr**.
+
+Sharing it here in case it’s a help to any other "accidental editors" out there!
 
 ## Install
 
