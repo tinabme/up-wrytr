@@ -57,6 +57,21 @@ You'll be prompted for your message, tone, and platform.
 ./uw "your message here" -t casual -c slack
 ```
 
+### Iterate in-terminal (ephemeral session)
+
+```bash
+./uw "your message here" -t casual -c slack -r
+```
+
+After each result you can:
+
+- accept
+- refine the current draft
+- start over with a new draft
+- quit
+
+Sessions are terminal-only and in-memory. If you close the terminal, the session is gone.
+
 ### Pipe from stdin
 
 ```bash
@@ -85,6 +100,7 @@ echo "message draft" | ./uw -t professional -c email
 -f, --file [path]      Read message from file
 -b, --brainstorm       Generate ideas and suggestions
 -i, --interactive      Interactive mode with prompts
+-r, --iterate          Keep refining in the same terminal session (no persistence)
 -h, --help             Show help
 ```
 

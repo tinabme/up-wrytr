@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
-    "setup": "npm install && echo 'Set up your GitHub token in .env or use gh CLI'"
+    "setup": "npm install && echo 'Set up your GitHub token in .env or use gh CLI'",
+    "test": "node --test"
   },
   "keywords": ["llm", "cli", "slack", "email", "github"],
   "author": "",
