@@ -284,4 +284,4 @@ Feel free to fork and enhance! Some ideas:
 
 Built to help you communicate better.
 
-Having issues? [Report them](TODO) or reach out!
+Having issues? [Report them](https://github.com/tinabme/up-wrytr/issues/new/choose) or reach out!
